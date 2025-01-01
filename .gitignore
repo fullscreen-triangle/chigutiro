@@ -1,0 +1,24 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Environment
+venv/
+.env/
+
+# PyCharm settings
+.idea/
+
+# Test coverage reports
+.coverage
+*.cover
+
+# Logs
+logs/
+*.log
+
+# Data and results
+data/
+results/
+plots/
+similarity_network/
