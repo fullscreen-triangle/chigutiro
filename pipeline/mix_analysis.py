@@ -1,5 +1,6 @@
 import librosa
 import os
+import numpy as np
 
 def segment_mix(audio_file):
     y, sr = librosa.load(audio_file, sr=None)

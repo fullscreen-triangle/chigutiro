@@ -52,12 +52,12 @@ def analyze_mix(mix_file, amen_break_file, db_dir="database", output_dir="result
 
     print("Generating bassline plots...")
     for segment_file, features in processed_tracks.items():
-        bassline_output = os.path.join(output_dir, f"{os.path.basename(segment_file)}_bassline.png")
+        bassline_output = os.path.join(output_dir, "{}_bassline.png".format(os.path.basename(segment_file)))
         plot_bassline(features["bassline"], features.get("sr", 22050), bassline_output)
 
     print("Clustering segments...")
     clusters = cluster_segments(processed_tracks)
-    print(f"Clusters: {clusters}")
+    print("Clusters: {}".format(clusters))
 
     print("Visualizing mix signature...")
     visualize_mix_signature(similarity_graph, processed_tracks, os.path.join(output_dir, "mix_signature.png"))
